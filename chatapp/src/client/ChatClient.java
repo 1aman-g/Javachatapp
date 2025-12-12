@@ -17,7 +17,7 @@ public class ChatClient {
         System.out.print("Enter your name: ");
         String name = userIn.readLine();
 
-        // Thread to read messages from server
+       
         new Thread(() -> {
             try {
                 String msg;
@@ -29,7 +29,7 @@ public class ChatClient {
             }
         }).start();
 
-        // Sending messages
+       
         while (true) {
             String input = userIn.readLine();
             ChatMessage message = new ChatMessage(name, input);
